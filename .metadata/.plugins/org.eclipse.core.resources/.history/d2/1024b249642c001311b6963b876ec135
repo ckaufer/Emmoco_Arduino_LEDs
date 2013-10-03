@@ -323,7 +323,7 @@ switch(ledNum)
     case 14:
     LED14_ON();
     break;
-    case 15:
+    case 15;
     LED15_ON();
     break;
     
@@ -363,9 +363,7 @@ void Hal_User_ledOff(uint8_t ledNum)
      case 14:
      LED14_OFF();
      break;
-     case 15:
-     LED15_OFF();
-     break;
+     
     }
 }
 void Hal_ledOff(void) {

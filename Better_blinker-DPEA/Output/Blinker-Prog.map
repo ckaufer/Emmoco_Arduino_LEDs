@@ -204,7 +204,7 @@ LOAD c:/progs/winavr-20100110/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\
 xdc.meta
  *(xdc.meta)
 
-.text           0x00000000      0xc36
+.text           0x00000000      0xc5e
  *(.vectors)
  .vectors       0x00000000       0x68 ../Platform-Arduino-Uno/Avr/crt0.o
                 0x00000000                __vectors
@@ -353,50 +353,50 @@ xdc.meta
                 0x000007f2        0x2 Output/Hal.obj
                 0x000007f2                Hal_disconnected
  .text.Hal_init
-                0x000007f4       0x70 Output/Hal.obj
+                0x000007f4       0x78 Output/Hal.obj
                 0x000007f4                Hal_init
  .text.Hal_idleLoop
-                0x00000864       0x5a Output/Hal.obj
-                0x00000864                Hal_idleLoop
+                0x0000086c       0x5a Output/Hal.obj
+                0x0000086c                Hal_idleLoop
  .text.Hal_User_ledOn
-                0x000008be       0x56 Output/Hal.obj
-                0x000008be                Hal_User_ledOn
+                0x000008c6       0x66 Output/Hal.obj
+                0x000008c6                Hal_User_ledOn
  .text.Hal_User_ledOff
-                0x00000914       0x56 Output/Hal.obj
-                0x00000914                Hal_User_ledOff
+                0x0000092c       0x66 Output/Hal.obj
+                0x0000092c                Hal_User_ledOff
  .text.Hal_ledOff
-                0x0000096a        0x4 Output/Hal.obj
-                0x0000096a                Hal_ledOff
+                0x00000992        0x4 Output/Hal.obj
+                0x00000992                Hal_ledOff
  .text.Hal_ledRead
-                0x0000096e       0x18 Output/Hal.obj
-                0x0000096e                Hal_ledRead
+                0x00000996       0x18 Output/Hal.obj
+                0x00000996                Hal_ledRead
  .text.Hal_tickStart
-                0x00000986       0x3e Output/Hal.obj
-                0x00000986                Hal_tickStart
+                0x000009ae       0x3e Output/Hal.obj
+                0x000009ae                Hal_tickStart
  .text.Em_Hal_lock
-                0x000009c4        0x8 Output/Hal.obj
-                0x000009c4                Em_Hal_lock
+                0x000009ec        0x8 Output/Hal.obj
+                0x000009ec                Em_Hal_lock
  .text.Em_Hal_startSend
-                0x000009cc       0x1c Output/Hal.obj
-                0x000009cc                Em_Hal_startSend
+                0x000009f4       0x1c Output/Hal.obj
+                0x000009f4                Em_Hal_startSend
  .text.Em_Hal_unlock
-                0x000009e8        0xc Output/Hal.obj
-                0x000009e8                Em_Hal_unlock
+                0x00000a10        0xc Output/Hal.obj
+                0x00000a10                Em_Hal_unlock
  .text.__vector_18
-                0x000009f4       0xa4 Output/Hal.obj
-                0x000009f4                __vector_18
+                0x00000a1c       0xa4 Output/Hal.obj
+                0x00000a1c                __vector_18
  .text.__vector_11
-                0x00000a98       0x4e Output/Hal.obj
-                0x00000a98                __vector_11
+                0x00000ac0       0x4e Output/Hal.obj
+                0x00000ac0                __vector_11
  .text.__vector_1
-                0x00000ae6       0x92 Output/Hal.obj
-                0x00000ae6                __vector_1
+                0x00000b0e       0x92 Output/Hal.obj
+                0x00000b0e                __vector_1
  .text.Em_Hal_reset
-                0x00000b78       0x96 Output/Hal.obj
-                0x00000b78                Em_Hal_reset
- .text.libgcc   0x00000c0e       0x28 c:/progs/winavr-20100110/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_udivmodhi4.o)
-                0x00000c0e                __udivmodhi4
-                0x00000c36                . = ALIGN (0x2)
+                0x00000ba0       0x96 Output/Hal.obj
+                0x00000ba0                Em_Hal_reset
+ .text.libgcc   0x00000c36       0x28 c:/progs/winavr-20100110/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_udivmodhi4.o)
+                0x00000c36                __udivmodhi4
+                0x00000c5e                . = ALIGN (0x2)
  *(.fini9)
  *(.fini9)
  *(.fini8)
@@ -417,9 +417,9 @@ xdc.meta
  *(.fini1)
  *(.fini0)
  *(.fini0)
-                0x00000c36                _etext = .
+                0x00000c5e                _etext = .
 
-.data           0x00800100      0x11e load address 0x00000c36
+.data           0x00800100      0x11e load address 0x00000c5e
                 0x00800100                PROVIDE (__data_start, .)
                 0x00800200                . = (. + 0x100)
  *fill*         0x00800100      0x100 00
@@ -449,7 +449,7 @@ xdc.meta
                 0x0080021e                _edata = .
                 0x0080021e                PROVIDE (__data_end, .)
 
-.bss            0x0080021e       0x4c load address 0x00000d54
+.bss            0x0080021e       0x4c load address 0x00000d7c
                 0x0080021e                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
@@ -496,8 +496,8 @@ xdc.meta
                 0x00800267                Em_App_xmitIdx
                 0x00800268                Em_App_desc
                 0x0080026a                PROVIDE (__bss_end, .)
-                0x00000c36                __data_load_start = LOADADDR (.data)
-                0x00000d54                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000c5e                __data_load_start = LOADADDR (.data)
+                0x00000d7c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080026a        0x0
                 0x0080026a                PROVIDE (__noinit_start, .)
@@ -574,11 +574,11 @@ xdc.meta
  .debug_pubnames
                 0x000004c4      0x1c3 Output/Hal.obj
 
-.debug_info     0x00000000     0x14b9
+.debug_info     0x00000000     0x14ba
  *(.debug_info)
  .debug_info    0x00000000      0x31d Output/Blinker-Prog.obj
  .debug_info    0x0000031d      0xa98 Output/Blinker.obj
- .debug_info    0x00000db5      0x704 Output/Hal.obj
+ .debug_info    0x00000db5      0x705 Output/Hal.obj
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev   0x00000000      0x680
@@ -587,11 +587,11 @@ xdc.meta
  .debug_abbrev  0x00000109      0x291 Output/Blinker.obj
  .debug_abbrev  0x0000039a      0x2e6 Output/Hal.obj
 
-.debug_line     0x00000000     0x16e9
+.debug_line     0x00000000     0x1730
  *(.debug_line)
  .debug_line    0x00000000      0x2df Output/Blinker-Prog.obj
  .debug_line    0x000002df      0xb09 Output/Blinker.obj
- .debug_line    0x00000de8      0x901 Output/Hal.obj
+ .debug_line    0x00000de8      0x948 Output/Hal.obj
 
 .debug_frame    0x00000000      0x3c0
  *(.debug_frame)

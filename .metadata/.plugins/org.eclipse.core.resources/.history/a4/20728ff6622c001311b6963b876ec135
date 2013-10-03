@@ -219,8 +219,7 @@ void Hal_disconnected(void) {
 
 void Hal_init() {
 LED13_OFF();LED6_OFF();LED5_OFF();LED7_OFF();LED8_OFF();LED10_OFF();LED3_OFF();LED14_OFF();
-    LED15_OFF();
-DEBUG12_CONFIG(); DEBUG12_OFF();
+    DEBUG12_CONFIG(); DEBUG12_OFF();
     DEBUG11_CONFIG(); DEBUG11_OFF();
     DEBUG9_CONFIG();  DEBUG9_OFF();
     DEBUG12_ON(); DEBUG12_OFF();LED10_OFF();
@@ -239,7 +238,7 @@ DEBUG12_CONFIG(); DEBUG12_OFF();
     
     
     
-    LED15_CONFIG();
+    
     LED10_CONFIG();
     
     
@@ -323,9 +322,6 @@ switch(ledNum)
     case 14:
     LED14_ON();
     break;
-    case 15:
-    LED15_ON();
-    break;
     
 }
 }
@@ -363,9 +359,7 @@ void Hal_User_ledOff(uint8_t ledNum)
      case 14:
      LED14_OFF();
      break;
-     case 15:
-     LED15_OFF();
-     break;
+     
     }
 }
 void Hal_ledOff(void) {
