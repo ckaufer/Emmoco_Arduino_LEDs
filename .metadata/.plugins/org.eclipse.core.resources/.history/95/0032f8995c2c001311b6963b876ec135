@@ -4,7 +4,7 @@
 static void tickHandler(void);
 
 static Blinker_cmd_t cmdVal = Blinker_START_CMD;
-static Blinker_count_t countVal = 13;
+static Blinker_count_t countVal = 0;
 static Blinker_delay_t delayVal = 1.2 * Blinker_delay_scale;
 
 #define FOREVER -1
@@ -17,7 +17,7 @@ void main() {
     Hal_tickStart(Blinker_delay_step, tickHandler);
     Blinker_start();
     Hal_idleLoop();
-    
+    countVal=13;
 }
 
 static void tickHandler(void) {
@@ -34,10 +34,9 @@ static void tickHandler(void) {
     if (curCount == FOREVER || curCount-- > 0) {
        uint16_t i; 
         for(i=countVal;i>=3;i--){
-  
-    Hal_User_ledOn(i);
+   Hal_User_ledOn(i);
    Hal_delay((uint16_t)delayVal/10);
-   //Hal_User_ledOff(i);
+   Hal_User_ledOff(i);
    }
       for(i=3;i<=countVal;i++){
    Hal_User_ledOn(i);

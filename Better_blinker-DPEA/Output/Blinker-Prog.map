@@ -204,7 +204,7 @@ LOAD c:/progs/winavr-20100110/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\
 xdc.meta
  *(xdc.meta)
 
-.text           0x00000000      0xc04
+.text           0x00000000      0xc36
  *(.vectors)
  .vectors       0x00000000       0x68 ../Platform-Arduino-Uno/Avr/crt0.o
                 0x00000000                __vectors
@@ -309,94 +309,94 @@ xdc.meta
  .text.Blinker_connectHandler
                 0x0000013e        0x6 Output/Blinker-Prog.obj
                 0x0000013e                Blinker_connectHandler
- .text.main     0x00000144       0x2a Output/Blinker-Prog.obj
+ .text.main     0x00000144       0x1a Output/Blinker-Prog.obj
                 0x00000144                main
  .text.tickHandler
-                0x0000016e       0xa8 Output/Blinker-Prog.obj
+                0x0000015e       0xea Output/Blinker-Prog.obj
  .text.Em_App_startResSend
-                0x00000216       0x20 Output/Blinker.obj
-                0x00000216                Em_App_startResSend
+                0x00000248       0x20 Output/Blinker.obj
+                0x00000248                Em_App_startResSend
  .text.Em_App_sendIndicator
-                0x00000236       0x46 Output/Blinker.obj
-                0x00000236                Em_App_sendIndicator
+                0x00000268       0x46 Output/Blinker.obj
+                0x00000268                Em_App_sendIndicator
  .text.Em_Message_nextXmit
-                0x0000027c       0x64 Output/Blinker.obj
-                0x0000027c                Em_Message_nextXmit
+                0x000002ae       0x64 Output/Blinker.obj
+                0x000002ae                Em_Message_nextXmit
  .text.Blinker_start
-                0x000002e0       0x54 Output/Blinker.obj
-                0x000002e0                Blinker_start
+                0x00000312       0x54 Output/Blinker.obj
+                0x00000312                Blinker_start
  .text.Em_App_sysStoreDispatch
-                0x00000334       0xaa Output/Blinker.obj
-                0x00000334                Em_App_sysStoreDispatch
+                0x00000366       0xaa Output/Blinker.obj
+                0x00000366                Em_App_sysStoreDispatch
  .text.Em_App_sysFetchDispatch
-                0x000003de      0x128 Output/Blinker.obj
-                0x000003de                Em_App_sysFetchDispatch
+                0x00000410      0x128 Output/Blinker.obj
+                0x00000410                Em_App_sysFetchDispatch
  .text.Em_App_storeDispatch
-                0x00000506       0xdc Output/Blinker.obj
-                0x00000506                Em_App_storeDispatch
+                0x00000538       0xdc Output/Blinker.obj
+                0x00000538                Em_App_storeDispatch
  .text.Em_App_fetchDispatch
-                0x000005e2       0xc8 Output/Blinker.obj
-                0x000005e2                Em_App_fetchDispatch
+                0x00000614       0xc8 Output/Blinker.obj
+                0x00000614                Em_App_fetchDispatch
  .text.Em_Message_dispatch
-                0x000006aa       0x76 Output/Blinker.obj
-                0x000006aa                Em_Message_dispatch
+                0x000006dc       0x76 Output/Blinker.obj
+                0x000006dc                Em_Message_dispatch
  .text.Blinker_ledState_indicate
-                0x00000720       0x6c Output/Blinker.obj
-                0x00000720                Blinker_ledState_indicate
+                0x00000752       0x6c Output/Blinker.obj
+                0x00000752                Blinker_ledState_indicate
  .text.Hal_connected
-                0x0000078c        0x2 Output/Hal.obj
-                0x0000078c                Hal_connected
+                0x000007be        0x2 Output/Hal.obj
+                0x000007be                Hal_connected
  .text.Hal_delay
-                0x0000078e       0x32 Output/Hal.obj
-                0x0000078e                Hal_delay
+                0x000007c0       0x32 Output/Hal.obj
+                0x000007c0                Hal_delay
  .text.Hal_disconnected
-                0x000007c0        0x2 Output/Hal.obj
-                0x000007c0                Hal_disconnected
+                0x000007f2        0x2 Output/Hal.obj
+                0x000007f2                Hal_disconnected
  .text.Hal_init
-                0x000007c2       0x70 Output/Hal.obj
-                0x000007c2                Hal_init
+                0x000007f4       0x70 Output/Hal.obj
+                0x000007f4                Hal_init
  .text.Hal_idleLoop
-                0x00000832       0x5a Output/Hal.obj
-                0x00000832                Hal_idleLoop
+                0x00000864       0x5a Output/Hal.obj
+                0x00000864                Hal_idleLoop
  .text.Hal_User_ledOn
-                0x0000088c       0x56 Output/Hal.obj
-                0x0000088c                Hal_User_ledOn
+                0x000008be       0x56 Output/Hal.obj
+                0x000008be                Hal_User_ledOn
  .text.Hal_User_ledOff
-                0x000008e2       0x56 Output/Hal.obj
-                0x000008e2                Hal_User_ledOff
+                0x00000914       0x56 Output/Hal.obj
+                0x00000914                Hal_User_ledOff
  .text.Hal_ledOff
-                0x00000938        0x4 Output/Hal.obj
-                0x00000938                Hal_ledOff
+                0x0000096a        0x4 Output/Hal.obj
+                0x0000096a                Hal_ledOff
  .text.Hal_ledRead
-                0x0000093c       0x18 Output/Hal.obj
-                0x0000093c                Hal_ledRead
+                0x0000096e       0x18 Output/Hal.obj
+                0x0000096e                Hal_ledRead
  .text.Hal_tickStart
-                0x00000954       0x3e Output/Hal.obj
-                0x00000954                Hal_tickStart
+                0x00000986       0x3e Output/Hal.obj
+                0x00000986                Hal_tickStart
  .text.Em_Hal_lock
-                0x00000992        0x8 Output/Hal.obj
-                0x00000992                Em_Hal_lock
+                0x000009c4        0x8 Output/Hal.obj
+                0x000009c4                Em_Hal_lock
  .text.Em_Hal_startSend
-                0x0000099a       0x1c Output/Hal.obj
-                0x0000099a                Em_Hal_startSend
+                0x000009cc       0x1c Output/Hal.obj
+                0x000009cc                Em_Hal_startSend
  .text.Em_Hal_unlock
-                0x000009b6        0xc Output/Hal.obj
-                0x000009b6                Em_Hal_unlock
+                0x000009e8        0xc Output/Hal.obj
+                0x000009e8                Em_Hal_unlock
  .text.__vector_18
-                0x000009c2       0xa4 Output/Hal.obj
-                0x000009c2                __vector_18
+                0x000009f4       0xa4 Output/Hal.obj
+                0x000009f4                __vector_18
  .text.__vector_11
-                0x00000a66       0x4e Output/Hal.obj
-                0x00000a66                __vector_11
+                0x00000a98       0x4e Output/Hal.obj
+                0x00000a98                __vector_11
  .text.__vector_1
-                0x00000ab4       0x92 Output/Hal.obj
-                0x00000ab4                __vector_1
+                0x00000ae6       0x92 Output/Hal.obj
+                0x00000ae6                __vector_1
  .text.Em_Hal_reset
-                0x00000b46       0x96 Output/Hal.obj
-                0x00000b46                Em_Hal_reset
- .text.libgcc   0x00000bdc       0x28 c:/progs/winavr-20100110/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_udivmodhi4.o)
-                0x00000bdc                __udivmodhi4
-                0x00000c04                . = ALIGN (0x2)
+                0x00000b78       0x96 Output/Hal.obj
+                0x00000b78                Em_Hal_reset
+ .text.libgcc   0x00000c0e       0x28 c:/progs/winavr-20100110/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_udivmodhi4.o)
+                0x00000c0e                __udivmodhi4
+                0x00000c36                . = ALIGN (0x2)
  *(.fini9)
  *(.fini9)
  *(.fini8)
@@ -417,9 +417,9 @@ xdc.meta
  *(.fini1)
  *(.fini0)
  *(.fini0)
-                0x00000c04                _etext = .
+                0x00000c36                _etext = .
 
-.data           0x00800100      0x11c load address 0x00000c04
+.data           0x00800100      0x11e load address 0x00000c36
                 0x00800100                PROVIDE (__data_start, .)
                 0x00800200                . = (. + 0x100)
  *fill*         0x00800100      0x100 00
@@ -428,30 +428,31 @@ xdc.meta
  *(.data*)
  .data.delayVal
                 0x00800200        0x2 Output/Blinker-Prog.obj
- .data.curCount
+ .data.countVal
                 0x00800202        0x2 Output/Blinker-Prog.obj
+ .data.curCount
+                0x00800204        0x2 Output/Blinker-Prog.obj
  .data.Em_App_inBuf
-                0x00800204        0x2 Output/Blinker.obj
-                0x00800204                Em_App_inBuf
+                0x00800206        0x2 Output/Blinker.obj
+                0x00800206                Em_App_inBuf
  *(.rodata)
  *(.rodata*)
  .rodata.Em_App_hash
-                0x00800206       0x13 Output/Blinker.obj
-                0x00800206                Em_App_hash
+                0x00800208       0x13 Output/Blinker.obj
+                0x00800208                Em_App_hash
  .rodata.Em_App_endian
-                0x00800219        0x2 Output/Blinker.obj
-                0x00800219                Em_App_endian
+                0x0080021b        0x2 Output/Blinker.obj
+                0x0080021b                Em_App_endian
  *(.gnu.linkonce.d*)
-                0x0080021c                . = ALIGN (0x2)
- *fill*         0x0080021b        0x1 00
-                0x0080021c                _edata = .
-                0x0080021c                PROVIDE (__data_end, .)
+                0x0080021e                . = ALIGN (0x2)
+ *fill*         0x0080021d        0x1 00
+                0x0080021e                _edata = .
+                0x0080021e                PROVIDE (__data_end, .)
 
-.bss            0x0080021c       0x4e load address 0x00000d20
-                0x0080021c                PROVIDE (__bss_start, .)
+.bss            0x0080021e       0x4c load address 0x00000d54
+                0x0080021e                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.countVal  0x0080021c        0x2 Output/Blinker-Prog.obj
  .bss.cmdVal    0x0080021e        0x1 Output/Blinker-Prog.obj
  .bss.curTime   0x0080021f        0x2 Output/Blinker-Prog.obj
  .bss.Em_App_state
@@ -495,8 +496,8 @@ xdc.meta
                 0x00800267                Em_App_xmitIdx
                 0x00800268                Em_App_desc
                 0x0080026a                PROVIDE (__bss_end, .)
-                0x00000c04                __data_load_start = LOADADDR (.data)
-                0x00000d20                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000c36                __data_load_start = LOADADDR (.data)
+                0x00000d54                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080026a        0x0
                 0x0080026a                PROVIDE (__noinit_start, .)
@@ -573,24 +574,24 @@ xdc.meta
  .debug_pubnames
                 0x000004c4      0x1c3 Output/Hal.obj
 
-.debug_info     0x00000000     0x14dd
+.debug_info     0x00000000     0x14b9
  *(.debug_info)
- .debug_info    0x00000000      0x341 Output/Blinker-Prog.obj
- .debug_info    0x00000341      0xa98 Output/Blinker.obj
- .debug_info    0x00000dd9      0x704 Output/Hal.obj
+ .debug_info    0x00000000      0x31d Output/Blinker-Prog.obj
+ .debug_info    0x0000031d      0xa98 Output/Blinker.obj
+ .debug_info    0x00000db5      0x704 Output/Hal.obj
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000      0x6c9
+.debug_abbrev   0x00000000      0x680
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x152 Output/Blinker-Prog.obj
- .debug_abbrev  0x00000152      0x291 Output/Blinker.obj
- .debug_abbrev  0x000003e3      0x2e6 Output/Hal.obj
+ .debug_abbrev  0x00000000      0x109 Output/Blinker-Prog.obj
+ .debug_abbrev  0x00000109      0x291 Output/Blinker.obj
+ .debug_abbrev  0x0000039a      0x2e6 Output/Hal.obj
 
-.debug_line     0x00000000     0x16d3
+.debug_line     0x00000000     0x16e9
  *(.debug_line)
- .debug_line    0x00000000      0x2c9 Output/Blinker-Prog.obj
- .debug_line    0x000002c9      0xb09 Output/Blinker.obj
- .debug_line    0x00000dd2      0x901 Output/Hal.obj
+ .debug_line    0x00000000      0x2df Output/Blinker-Prog.obj
+ .debug_line    0x000002df      0xb09 Output/Blinker.obj
+ .debug_line    0x00000de8      0x901 Output/Hal.obj
 
 .debug_frame    0x00000000      0x3c0
  *(.debug_frame)

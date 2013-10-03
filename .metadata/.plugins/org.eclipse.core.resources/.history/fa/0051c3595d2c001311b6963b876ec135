@@ -30,12 +30,9 @@ static void tickHandler(void) {
         curTime += Blinker_delay_step;
         return;
     }
-
-    if (curCount == FOREVER || curCount-- > 0) {
-       uint16_t i; 
+ uint16_t i; 
         for(i=countVal;i>=3;i--){
-  
-    Hal_User_ledOn(i);
+   Hal_User_ledOn(i);
    Hal_delay((uint16_t)delayVal/10);
    //Hal_User_ledOff(i);
    }
@@ -43,6 +40,8 @@ static void tickHandler(void) {
    Hal_User_ledOn(i);
    Hal_delay((uint16_t)delayVal/10);
    Hal_User_ledOff(i);
+    if (curCount == FOREVER || curCount-- > 0) {
+      
    }
         
       //Hal_ledToggle();

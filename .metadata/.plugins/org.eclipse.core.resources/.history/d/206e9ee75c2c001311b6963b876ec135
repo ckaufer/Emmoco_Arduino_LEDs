@@ -34,10 +34,9 @@ static void tickHandler(void) {
     if (curCount == FOREVER || curCount-- > 0) {
        uint16_t i; 
         for(i=countVal;i>=3;i--){
-  
-    Hal_User_ledOn(i);
+   Hal_User_ledOn(i);
    Hal_delay((uint16_t)delayVal/10);
-   //Hal_User_ledOff(i);
+   Hal_User_ledOff(i);
    }
       for(i=3;i<=countVal;i++){
    Hal_User_ledOn(i);

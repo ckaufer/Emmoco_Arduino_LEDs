@@ -36,6 +36,7 @@
 <part id="2"/>
 <part id="5"/>
 <part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
@@ -46,19 +47,19 @@
 </editor>
 <editor activePart="true" focus="true" id="com.emmoco.embuilder.clangEditor" name="Blinker-Prog.c" partName="Blinker-Prog.c" path="C:/Emmoco/Em-Builder/eclipse/workspace/Better_blinker-DPEA/Blinker-Prog.c" title="Blinker-Prog.c" tooltip="Better_blinker-DPEA/Blinker-Prog.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Better_blinker-DPEA/Blinker-Prog.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="683" selectionTopPixel="297"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="513" selectionTopPixel="57"/>
 </editor>
 <editor id="com.emmoco.embuilder.clangEditor" name="Hal.h" partName="Hal.h" path="C:/Emmoco/Em-Builder/eclipse/workspace/Platform-Arduino-Uno/Hal/Hal.h" title="Hal.h" tooltip="Better_blinker-DPEA/Hal/Hal.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Better_blinker-DPEA/Hal/Hal.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5488" selectionTopPixel="2880"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5488" selectionTopPixel="2610"/>
 </editor>
 <editor id="com.emmoco.embuilder.clangEditor" name="Hal.c" partName="Hal.c" path="C:/Emmoco/Em-Builder/eclipse/workspace/Platform-Arduino-Uno/Hal/Hal.c" title="Hal.c" tooltip="Better_blinker-DPEA/Hal/Hal.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Better_blinker-DPEA/Hal/Hal.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="835" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7364" selectionTopPixel="3240"/>
 </editor>
 <editor id="com.emmoco.embuilder.clangEditor" name="Blinker-Prog.c" partName="Blinker-Prog.c" path="C:/Emmoco/Em-Builder/eclipse/workspace/Blinker-Arduino-Uno/Blinker-Prog.c" title="Blinker-Prog.c" tooltip="Blinker-Arduino-Uno/Blinker-Prog.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Blinker-Arduino-Uno/Blinker-Prog.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="725" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="489" selectionTopPixel="0"/>
 </editor>
 <editor id="com.emmoco.embuilder.schemaEditor" name="Blinker.ems" partName="Blinker.ems" path="C:/Emmoco/Em-Builder/eclipse/workspace/Better_blinker-DPEA/Blinker.ems" title="Blinker.ems" tooltip="Better_blinker-DPEA/Blinker.ems" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Better_blinker-DPEA/Blinker.ems"/>
@@ -67,6 +68,10 @@
 <editor id="com.emmoco.embuilder.clangEditor" name="Blinker.c" partName="Blinker.c" path="C:/Emmoco/Em-Builder/eclipse/workspace/Better_blinker-DPEA/Em/Blinker.c" title="Blinker.c" tooltip="Better_blinker-DPEA/Em/Blinker.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Better_blinker-DPEA/Em/Blinker.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="12671" selectionTopPixel="6120"/>
+</editor>
+<editor id="com.emmoco.embuilder.clangEditor" name="Em_Message.h" partName="Em_Message.h" path="C:/Emmoco/Em-Builder/eclipse/workspace/Better_blinker-DPEA/Em/Em_Message.h" title="Em_Message.h" tooltip="Better_blinker-DPEA/Em/Em_Message.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Better_blinker-DPEA/Em/Em_Message.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="2" selectionOffset="2875" selectionTopPixel="1350"/>
 </editor>
 </editors>
 <views>
@@ -103,7 +108,7 @@
 <fastViewBars>
 <fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@3468a71c" orientation="512" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.43247864"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.12905984"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -127,7 +132,7 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24509804" ratioLeft="225" ratioRight="693" relationship="2" relative="org.eclipse.ui.internal.ViewStack@587817e4"/>
+<info part="org.eclipse.ui.editorss" ratio="0.27233115" ratioLeft="250" ratioRight="668" relationship="2" relative="org.eclipse.ui.internal.ViewStack@587817e4"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@3468a71c" ratio="0.59969085" ratioLeft="388" ratioRight="259" relationship="4" relative="org.eclipse.ui.internal.ViewStack@587817e4">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
@@ -141,163 +146,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Better_blinker-DPEA/Blinker-Prog.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Better_blinker-DPEA/Hal/Hal.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Better_blinker-DPEA/Blinker-Prog.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Blinker-Arduino-Uno/Blinker-Prog.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.schemaEditor" path="/Blinker-Arduino-Uno/Blinker.ems"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.schemaEditor" path="/Better_blinker-DPEA/Blinker.ems"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Better_blinker-DPEA/Em/Blinker.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Blinker-Arduino-Uno/Blinker-Prog.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Better_blinker-DPEA/Hal/Hal.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Better_blinker-DPEA/Hal/Hal.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" path="/Better_blinker-DPEA/Em/Em_Message.h"/>
 </editors>
-<item historyLabel="Hal.c" index="1">
-<position/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="0">
-<position info="not_deleted" x="744" y="0"/>
-</item>
-<item historyLabel="Hal.c" index="1">
-<position/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position info="not_deleted" x="1008" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="3">
-<position info="not_deleted" x="741" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position info="not_deleted" x="1575" y="0"/>
-</item>
-<item historyLabel="Hal.c" index="1">
-<position info="not_deleted" x="7481" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position info="not_deleted" x="239" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="3">
-<position info="not_deleted" x="741" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position info="not_deleted" x="510" y="1"/>
-</item>
-<item historyLabel="Blinker.ems" index="4">
-<position info="not_deleted" x="251" y="0"/>
-</item>
-<item historyLabel="Hal.c" index="1">
-<position info="not_deleted" x="7265" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position info="not_deleted" x="1008" y="0"/>
-</item>
-<item historyLabel="Hal.c" index="1">
-<position info="not_deleted" x="7381" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position info="not_deleted" x="829" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="3">
-<position info="not_deleted" x="741" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position info="not_deleted" x="829" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="3">
-<position info="not_deleted" x="725" y="16"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position info="not_deleted" x="499" y="0"/>
-</item>
-<item historyLabel="Hal.c" index="1">
-<position info="not_deleted" x="595" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="3">
-<position info="not_deleted" x="725" y="16"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="3">
-<position info="not_deleted" x="725" y="16"/>
-</item>
-<item historyLabel="Hal.c" index="1">
-<position info="not_deleted" x="1802" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
-<position/>
-</item>
-<item historyLabel="Hal.c" index="1">
-<position info="not_deleted" x="2407" y="0"/>
-</item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="916" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="5339" y="0"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="972" y="0"/>
 </item>
-<item historyLabel="Blinker.ems" index="5">
+<item historyLabel="Blinker.ems" index="2">
 <position info="not_deleted" x="207" y="0"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="514" y="0"/>
 </item>
-<item historyLabel="Blinker.ems" index="5">
+<item historyLabel="Blinker.ems" index="2">
 <position info="not_deleted" x="215" y="8"/>
 </item>
-<item historyLabel="Blinker.c" index="6">
+<item historyLabel="Blinker.c" index="3">
 <position info="not_deleted" x="12671" y="3"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="888" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="7335" y="0"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="1057" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="6925" y="0"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="959" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="7464" y="0"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="800" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="8736" y="5"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="796" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="7520" y="0"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="796" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="7579" y="0"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="768" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="7579" y="0"/>
 </item>
-<item historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="888" y="0"/>
 </item>
-<item historyLabel="Hal.c" index="1">
+<item historyLabel="Hal.c" index="0">
 <position info="not_deleted" x="835" y="0"/>
 </item>
-<item active="true" historyLabel="Blinker-Prog.c" index="2">
+<item historyLabel="Blinker-Prog.c" index="1">
 <position info="not_deleted" x="888" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="4">
+<position info="not_deleted" x="725" y="16"/>
+</item>
+<item historyLabel="Hal.h" index="5">
+<position info="not_deleted" x="5488" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="7121" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="945" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="7121" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="6419" y="5"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="885" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="6419" y="5"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="877" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position/>
+</item>
+<item historyLabel="Em_Message.h" index="7">
+<position info="not_deleted" x="2875" y="2"/>
+</item>
+<item historyLabel="Hal.h" index="5">
+<position info="not_deleted" x="5488" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="4">
+<position info="not_deleted" x="489" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="7006" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="877" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="2922" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="1036" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="9099" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="849" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="7273" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="505" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="7316" y="0"/>
+</item>
+<item historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="513" y="0"/>
+</item>
+<item historyLabel="Hal.c" index="6">
+<position info="not_deleted" x="7364" y="0"/>
+</item>
+<item active="true" historyLabel="Blinker-Prog.c" index="1">
+<position info="not_deleted" x="513" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -319,6 +325,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" name="Em_Message.h" tooltip="Better_blinker-DPEA/Em/Em_Message.h">
+<persistable path="/Better_blinker-DPEA/Em/Em_Message.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.emmoco.embuilder.clangEditor" name="Blinker.c" tooltip="Better_blinker-DPEA/Em/Blinker.c">
 <persistable path="/Better_blinker-DPEA/Em/Blinker.c"/>
 </file>
