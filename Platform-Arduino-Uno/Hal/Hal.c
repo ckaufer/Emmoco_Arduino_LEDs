@@ -42,21 +42,32 @@
 #define LED8_TOGGLE()                (PORTB ^= LED8_BIT)
 
 #define LED7_BIT                     (1 << 7)
-#define LED7_CONFIG()                (DDRB |= LED7_BIT)
+#define LED7_CONFIG()                (DDRD |= LED7_BIT)
 #define LED7_ON()                    (PORTD |= LED7_BIT)
+#define LED7_OFF()                   (PORTD &= ~LED7_BIT)
+#define LED7_READ()                  (PORTD & LED7_BIT)
 #define LED7_TOGGLE()                (PORTD ^= LED7_BIT)
 
 #define LED6_BIT                     (1 << 6)
-#define LED6_CONFIG()                (DDRB |= LED6_BIT)
+#define LED6_CONFIG()                (DDRD |= LED6_BIT)
 #define LED6_ON()                    (PORTD |= LED6_BIT)
 #define LED6_OFF()                   (PORTD &= ~LED6_BIT)
 #define LED6_READ()                  (PORTD & LED6_BIT)
 #define LED6_TOGGLE()                (PORTD ^= LED6_BIT)
 
-#define LED10_BIT               (1 << 2)
-#define LED10_CONFIG()          (DDRB |= LED10_BIT)
-#define LED10_ON()              (PORTB |= LED10_BIT)
-#define LED10_OFF()             (PORTB &= ~LED10_BIT)
+#define LED5_BIT                     (1 << 5)
+#define LED5_CONFIG()                (DDRD |= LED5_BIT)
+#define LED5_ON()                    (PORTD |= LED5_BIT)
+#define LED5_OFF()                   (PORTD &= ~LED5_BIT)
+#define LED5_READ()                  (PORTD & LED5_BIT)
+#define LED5_TOGGLE()                (PORTD ^= LED5_BIT)
+
+#define LED10_BIT                     (1 << 2)
+#define LED10_CONFIG()                (DDRB |= LED10_BIT)
+#define LED10_ON()                    (PORTB |= LED10_BIT)
+#define LED10_OFF()                   (PORTB &= ~LED10_BIT)
+#define LED10_READ()                  (PORTB & LED10_BIT)
+#define LED10_TOGGLE()                (PORTB ^= LED10_BIT)
 
 #define EAP_RX_ACK_BIT              (1 << 4)
 #define EAP_RX_ACK_CONFIG()         (DDRD |= EAP_RX_ACK_BIT)
@@ -117,7 +128,7 @@ void Hal_buttonEnable(Hal_Handler handler) {
 }
 
 void Hal_connected(void) {
-    LED10_ON();
+    //LED10_ON();
 }
 
 void Hal_debugOn(uint8_t line) {
@@ -181,21 +192,38 @@ void Hal_delay(uint16_t msecs) {
 }
 
 void Hal_disconnected(void) {
-    LED10_OFF();
+   // LED10_OFF();
 }
 
 void Hal_init() {
-
+LED13_OFF();LED6_OFF();LED5_OFF();LED7_OFF();LED8_OFF();LED10_OFF();
     DEBUG12_CONFIG(); DEBUG12_OFF();
     DEBUG11_CONFIG(); DEBUG11_OFF();
     DEBUG9_CONFIG();  DEBUG9_OFF();
-    DEBUG12_ON(); DEBUG12_OFF();
+    DEBUG12_ON(); DEBUG12_OFF();LED10_OFF();
 
     LED13_CONFIG();
-    LED13_OFF();
-
+    
+    LED6_CONFIG();
+    
+    LED5_CONFIG();
+    
+    LED7_CONFIG();
+    
+    LED8_CONFIG();
+   
+    
+    
+    
+    
+    
     LED10_CONFIG();
-    LED10_OFF();
+    
+    
+    
+    
+    
+
     
 
     EAP_TX_ACK_CONFIG();
@@ -248,6 +276,15 @@ switch(ledNum)
     case 8:
     LED8_ON();
     break;
+    case 7:
+    LED7_ON();
+    break;
+    case 5:
+    LED5_ON();
+    break;
+    case 6:
+    LED6_ON();
+    break;
     case 13:
     LED13_ON();
     break;
@@ -267,7 +304,17 @@ void Hal_User_ledOff(uint8_t ledNum)
     LED9_OFF();
     break;
    case 8:
-     LED8_OFF();break;
+     LED8_OFF();
+    break;
+    case 7:
+    LED7_OFF();
+    break;
+    case 5:
+    LED5_OFF();
+    break;
+    case 6:
+    LED6_OFF();
+    break;
      case 13:
      LED13_OFF();
      break;

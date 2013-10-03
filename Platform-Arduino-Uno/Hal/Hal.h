@@ -223,6 +223,7 @@ extern void Hal_init(void);
  *   User LED off.
  *
  **/
+ uint8_t ledArray[12];
 extern void Hal_ledOff(void);
 /**
  * --------- Hal_ledOn ---------

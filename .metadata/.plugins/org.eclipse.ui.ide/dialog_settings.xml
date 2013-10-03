@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.emmoco.embuilder:13.3.9.201310010338"/>
+		<item value="com.emmoco.embuildersdk:13.8.1.201310010338"/>
+		<item value="com.emmoco.embundles:13.3.9.201310010338"/>
+		<item value="com.emmoco.examples:13.5.1.201310010338"/>
+		<item value="com.emmoco.firmware:13.4.4.201310010338"/>
+		<item value="com.emmoco.mcmtooling.ccstudio:13.3.9.201310010338"/>
+		<item value="com.emmoco.mcmtooling:13.3.9.201310010338"/>
+		<item value="com.emmoco.msptools.win32:1.3.0.201309301215"/>
+		<item value="com.emmoco.rxtx:2.2.20081207.201309302239"/>
+		<item value="com.emmoco.schemas:13.3.9.201310010338"/>
+		<item value="org.eclipse.help:1.3.0.v20110530-0844-7i7uFFmFFl8nvqbDpEqTvx"/>
+		<item value="org.eclipse.platform:3.7.2.v20120207-1839-9gF7UHPDFxGjd-PqDr2jX_4yKaumkoHTz04_q-q"/>
+		<item value="org.eclipse.rcp:3.7.2.v20120120-1424-9DB5FmnFq5JCf1UA38R-kz0S0272"/>
+	</list>
+</section>
