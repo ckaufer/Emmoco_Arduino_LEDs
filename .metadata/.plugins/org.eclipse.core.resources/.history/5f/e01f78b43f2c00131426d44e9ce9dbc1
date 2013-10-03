@@ -62,13 +62,6 @@
 #define LED5_READ()                  (PORTD & LED5_BIT)
 #define LED5_TOGGLE()                (PORTD ^= LED5_BIT)
 
-#define LED3_BIT                     (1 << 3)
-#define LED3_CONFIG()                (DDRD |= LED3_BIT)
-#define LED3_ON()                    (PORTD |= LED3_BIT)
-#define LED3_OFF()                   (PORTD &= ~LED3_BIT)
-#define LED3_READ()                  (PORTD & LED3_BIT)
-#define LED3_TOGGLE()                (PORTD ^= LED3_BIT)
-
 #define LED10_BIT                     (1 << 2)
 #define LED10_CONFIG()                (DDRB |= LED10_BIT)
 #define LED10_ON()                    (PORTB |= LED10_BIT)
@@ -203,7 +196,7 @@ void Hal_disconnected(void) {
 }
 
 void Hal_init() {
-LED13_OFF();LED6_OFF();LED5_OFF();LED7_OFF();LED8_OFF();LED10_OFF();LED3_OFF();
+LED13_OFF();LED6_OFF();LED5_OFF();LED7_OFF();LED8_OFF();LED10_OFF();
     DEBUG12_CONFIG(); DEBUG12_OFF();
     DEBUG11_CONFIG(); DEBUG11_OFF();
     DEBUG9_CONFIG();  DEBUG9_OFF();
@@ -219,7 +212,7 @@ LED13_OFF();LED6_OFF();LED5_OFF();LED7_OFF();LED8_OFF();LED10_OFF();LED3_OFF();
     
     LED8_CONFIG();
    
-    LED3_CONFIG();
+    
     
     
     
@@ -286,9 +279,6 @@ switch(ledNum)
     case 7:
     LED7_ON();
     break;
-    case 3:
-    LED3_ON();
-    break;
     case 5:
     LED5_ON();
     break;
@@ -321,9 +311,6 @@ void Hal_User_ledOff(uint8_t ledNum)
     break;
     case 5:
     LED5_OFF();
-    break;
-    case 3:
-    LED3_OFF();
     break;
     case 6:
     LED6_OFF();

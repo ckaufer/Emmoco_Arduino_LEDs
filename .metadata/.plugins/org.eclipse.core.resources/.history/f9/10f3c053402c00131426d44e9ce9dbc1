@@ -219,7 +219,7 @@ LED13_OFF();LED6_OFF();LED5_OFF();LED7_OFF();LED8_OFF();LED10_OFF();LED3_OFF();
     
     LED8_CONFIG();
    
-    LED3_CONFIG();
+    
     
     
     

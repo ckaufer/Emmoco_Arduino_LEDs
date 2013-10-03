@@ -219,7 +219,7 @@ LED13_OFF();LED6_OFF();LED5_OFF();LED7_OFF();LED8_OFF();LED10_OFF();LED3_OFF();
     
     LED8_CONFIG();
    
-    LED3_CONFIG();
+    
     
     
     
@@ -321,9 +321,6 @@ void Hal_User_ledOff(uint8_t ledNum)
     break;
     case 5:
     LED5_OFF();
-    break;
-    case 3:
-    LED3_OFF();
     break;
     case 6:
     LED6_OFF();

@@ -17,7 +17,6 @@ void main() {
     Hal_tickStart(Blinker_delay_step, tickHandler);
     Blinker_start();
     Hal_idleLoop();
-    Blinker_count_store(13);
 }
 
 static void tickHandler(void) {
@@ -35,7 +34,7 @@ static void tickHandler(void) {
        uint16_t i; 
         for(i=countVal;i>=3;i--){
    Hal_User_ledOn(i);
-   Hal_delay((uint16_t)delayVal/10);
+   Hal_delay((uint8_t)delayVal/10);
    Hal_User_ledOff(i);
    }
         

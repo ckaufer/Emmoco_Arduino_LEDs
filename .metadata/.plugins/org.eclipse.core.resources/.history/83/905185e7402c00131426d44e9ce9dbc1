@@ -17,7 +17,6 @@ void main() {
     Hal_tickStart(Blinker_delay_step, tickHandler);
     Blinker_start();
     Hal_idleLoop();
-    Blinker_count_store(13);
 }
 
 static void tickHandler(void) {
