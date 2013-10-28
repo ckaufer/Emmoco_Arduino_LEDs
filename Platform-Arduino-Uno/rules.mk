@@ -11,7 +11,7 @@ MCU = atmega328p
 CC = $(TOOLS)/bin/avr-gcc
 OBJCOPY = $(TOOLS)/bin/avr-objcopy
 SIZE = $(TOOLS)/bin/avr-size
-LOAD = c:/Emmoco/Em-Builder/eclipse/workspace/Platform-Arduino-Uno/Avr/avrdude -C $(PLATFORM)/Avr/avrdude.conf -c stk500v1 -p $(MCU) -P COM3
+LOAD = c:/Emmoco/Em-Builder/eclipse/workspace/Platform-Arduino-Uno/Avr/avrdude -C $(PLATFORM)/Avr/avrdude.conf -c stk500v1 -p $(MCU) -P COM4
 COPTS = -std=gnu99 -w -g -O3 -fpack-struct=1 -ffunction-sections -fdata-sections -c -mmcu=$(MCU)
 CFLAGS = -I$(PLATFORM)/Hal -IEm -I$(TOOLS)/avr/include $(COPTS)
 LFLAGS = -mmcu=$(MCU) --entry __init -u __init -nostdlib -Wl,-Map=$(OUTDIR)/$(MAIN).map,--gc-sections

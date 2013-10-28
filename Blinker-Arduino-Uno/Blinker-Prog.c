@@ -9,6 +9,7 @@ static Blinker_delay_t delayVal = 1.2 * Blinker_delay_scale;
 
 #define FOREVER -1
 
+#define NUM_PATTERNS 3
 static Blinker_count_t curCount = FOREVER;
 static Blinker_delay_t curTime = 0;
 
@@ -70,6 +71,9 @@ void Blinker_count_fetch(Blinker_count_t* output) {
 
 void Blinker_count_store(Blinker_count_t* input) {
     countVal = *input;
+        if (countVal > NUM_PATTERNS) {
+        countVal = NUM_PATTERNS;
+    }
 }
 
 void Blinker_delay_fetch(Blinker_delay_t* output) {

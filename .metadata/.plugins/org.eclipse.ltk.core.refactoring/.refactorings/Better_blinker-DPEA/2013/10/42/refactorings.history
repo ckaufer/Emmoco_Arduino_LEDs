@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Better_blinker-DPEA/Hal/MainProj.c&apos; to &apos;MainProg.c&apos;" description="Rename resource &apos;MainProj.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Hal/MainProj.c" name="MainProg.c" stamp="1382024512560" updateReferences="true"/>
+</session>

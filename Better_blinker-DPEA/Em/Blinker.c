@@ -1,5 +1,5 @@
-/**** DO NOT EDIT -- this file has been automatically generated from @emmoco.com.Blinker on 2013-10-01T15:04:42 ****/
-/**** protocolLevel = 13, toolsVersion = 13.3.9.201310010338 ****/
+/**** DO NOT EDIT -- this file has been automatically generated from @emmoco.com.Blinker on 2013-10-24T16:37:35 ****/
+/**** protocolLevel = 13, toolsVersion = 13.3.13.201310241808 ****/
 
 #include "Em_Message.h"
 #include "Blinker.h"
@@ -11,7 +11,7 @@ extern "C" {
 #define Em_Message_protocolLevel 13
 
 typedef struct Em_App_Message {
-    uint8_t dummy;
+    uint8_t dummy[3];
     uint8_t sot;
     Em_Message_Header hdr;
     uint8_t data[20];
@@ -19,7 +19,7 @@ typedef struct Em_App_Message {
 
 const uint8_t Em_App_hash[] = {100, 133, 204, 118, 171, 105, 196, 176, 165, 61, 177, 160, 190, 191, 194, 241, 13, 0, ((sizeof(struct{uint8_t f1; uint16_t f2;}) - sizeof(uint16_t)) << 4) | (sizeof(struct{uint8_t f1; uint32_t f2;}) - sizeof(uint32_t))};
 
-const uint8_t Em_App_build[] = {252, 66, 13, 118, 65, 1, 0, 0};
+const uint8_t Em_App_build[] = {2, 144, 212, 236, 65, 1, 0, 0};
 
 #define Em_App_APP_RESOURCE_COUNT 4
 #define Em_App_SYS_RESOURCE_COUNT 9
@@ -31,6 +31,7 @@ const uint8_t Em_App_build[] = {252, 66, 13, 118, 65, 1, 0, 0};
 #define Em_App_PAIRINGON Blinker_pairingOn
 #define Em_App_PAIRINGOFF Blinker_pairingOff
 #define Em_App_RESET Blinker_reset
+#define Em_App_SETDEVICENAME Blinker_setDeviceName
 #define Em_App_START Blinker_start
 
 #define Em_App_CONNECTHANDLER Blinker_connectHandler
@@ -43,11 +44,16 @@ const uint8_t Em_App_build[] = {252, 66, 13, 118, 65, 1, 0, 0};
 enum {Em_App_IDLE, Em_App_STARTING, Em_App_DISCONNECTED, Em_App_CONNECTED};
 
 typedef struct Em_App_Indicator {
-    uint8_t dummy;
+    uint8_t dummy[3];
     uint8_t sot;
     Em_Message_Header hdr;
     uint8_t data[Em_Message_INDSIZE];
 } Em_App_Indicator;
+
+union { uint32_t align; Em_App_Message msg; } Em_App_msg_u;
+union { uint32_t align; Em_App_Indicator ind; } Em_App_ind_u;
+#define Em_App_msg Em_App_msg_u.msg
+#define Em_App_ind Em_App_ind_u.ind
 
 void (*Em_App_pdHdlr)(void);
 
@@ -59,8 +65,6 @@ Em_Message_Size Em_App_xmitIdx;
 Em_Message_Size Em_App_xmitSize;
 
 uint8_t Em_App_state = Em_App_IDLE;
-Em_App_Message Em_App_msg;
-Em_App_Indicator Em_App_ind;
 int32_t Em_App_fileIndex = 0;
 uint32_t Em_App_xmitMask = 0;
 
@@ -76,6 +80,9 @@ uint8_t _Em_Message_rxCnt = 0;
 
 uint8_t* _Em_Message_txBuf = 0;
 uint8_t _Em_Message_txCnt = 0;
+
+#define Em_App_DEVNAME_LEN 9
+const char* Em_App_devName = 0;
 
 void Em_App_fetchDispatch(void);
 void Em_Message_marshallToBuf(uint8_t* valp, uint8_t* bufp, const char* desc);
@@ -284,6 +291,10 @@ void Em_App_RESET(void) {
     Em_App_xmitMask = 0;
 }
 
+void Em_App_SETDEVICENAME(const char* name) {
+    Em_App_devName = name;
+}
+
 void Em_App_START(void) {
     Em_App_RESET();
     Em_App_state = Em_App_STARTING;
@@ -316,7 +327,7 @@ void Em_App_startResSend(void) {
 
 void Em_App_sysFetchDispatch(void) {
     uint8_t size = 0;
-    int i;
+    int i, j;
     switch (Em_App_msg.hdr.resId) {
         case Em_Message_SYS_SCHEMA_HASH:
             for (i = 0; i < sizeof (Em_App_hash); i++) {
@@ -324,6 +335,19 @@ void Em_App_sysFetchDispatch(void) {
             }
             Em_App_msg.data[sizeof (Em_App_hash)] = *((uint8_t*)&Em_App_endian);
             size = sizeof (Em_App_hash) + 1;
+            break;
+        case Em_Message_SYS_MCM_NAME:
+            if (Em_App_devName) {
+                for (i = 0; i < Em_App_DEVNAME_LEN; i++) {
+                    if ((Em_App_msg.data[i] = Em_App_devName[i]) == 0) {
+                        break;
+                    }
+                }
+                for (j = i; j < Em_App_DEVNAME_LEN; j++) {
+                    Em_App_msg.data[j] = 0;
+                }
+                size = Em_App_DEVNAME_LEN;
+            }
             break;
         case Em_Message_SYS_EAP_PROTOCOL_LEVEL:
             *((Em_Message_protocolLevel_t*)Em_App_msg.data) = Em_Message_protocolLevel;
