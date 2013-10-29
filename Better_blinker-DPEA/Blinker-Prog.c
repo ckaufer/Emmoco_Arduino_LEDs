@@ -1,12 +1,14 @@
 #include "Blinker.h"
 #include "Hal.h"
+#include "avr/interrupt.h"
+#include "avr/io.h"
 static void tickHandler(void);
 
 static Blinker_cmd_t cmdVal = Blinker_START_CMD;
 static Blinker_count_t countVal = 0;
-static Blinker_delay_t delayVal = 1.2 * Blinker_delay_scale; //=1000, delayVal = 1200
+static Blinker_delay_t delayVal = (1.2 * Blinker_delay_scale)/10; //=1000, delayVal = 1200
 
-#define TICK_RATE (Blinker_delay_step / 5)
+#define TICK_RATE  (Blinker_delay_scale/10)
 
 #define FOREVER -1
 static Blinker_delay_t curTime = 0;
@@ -20,9 +22,9 @@ static Blinker_delay_t curTime = 0;
 #define LED5 (1 << 5)
 #define LED6 (1 << 6)
 #define LED7 (1 << 7)
-#define LED8 (1 << 8)
-#define LED9 (1 << 9)
-#define LED10 ( 1<< 10 )
+#define LED8 (1 << 0)
+#define LED9 (1 << 1)
+#define LED10 ( 1 << 10 )
 #define LED11 (1 << 11)
 #define LED12 (1 << 12)
 #define LED13 (1 << 13)
