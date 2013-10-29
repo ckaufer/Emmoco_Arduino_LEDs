@@ -35,6 +35,13 @@
 #define LED11_READ()                  (PORTB & LED11_BIT)
 #define LED11_TOGGLE()                (PORTB ^= LED11_BIT)
 
+#define LED4_BIT                     (1 << 4)
+#define LED4_CONFIG()                (DDRD |= LED4_BIT)
+#define LED4_ON()                    (PORTD |= LED4_BIT)
+#define LED4_OFF()                   (PORTD &= ~LED4_BIT)
+#define LED4_READ()                  (PORTD & LED4_BIT)
+#define LED4_TOGGLE()                (PORTD ^= LED4_BIT)
+
 #define LED12_BIT                     (1 << 4)
 #define LED12_CONFIG()                (DDRB |= LED12_BIT)
 #define LED12_ON()                    (PORTB |= LED12_BIT)
@@ -91,10 +98,10 @@
 #define LED10_READ()                  (PORTB & LED10_BIT)
 #define LED10_TOGGLE()                (PORTB ^= LED10_BIT)
 
-#define EAP_RX_ACK_BIT              (1 << 4)
-#define EAP_RX_ACK_CONFIG()         (DDRD |= EAP_RX_ACK_BIT)
-#define EAP_RX_ACK_SET()            (PORTD |= EAP_RX_ACK_BIT)
-#define EAP_RX_ACK_CLR()            (PORTD &= ~EAP_RX_ACK_BIT)
+#define EAP_RX_ACK_BIT              (1 << 2)
+#define EAP_RX_ACK_CONFIG()         (DDRC |= EAP_RX_ACK_BIT)
+#define EAP_RX_ACK_SET()            (PORTC |= EAP_RX_ACK_BIT)
+#define EAP_RX_ACK_CLR()            (PORTC &= ~EAP_RX_ACK_BIT)
 
 #define EAP_TX_ACK_BIT              (1 << 2)
 #define EAP_TX_ACK_CONFIG()         (DDRD &= ~EAP_TX_ACK_BIT, PORTD |= EAP_TX_ACK_BIT, EICRA |= 0x3) 
@@ -196,21 +203,21 @@ void Hal_debugPulse(uint8_t line) {
 void Hal_delay(uint16_t msecs) {
     while (msecs-- > 0) {
         uint16_t i;
-	    for (i = 0; i < 1000; i++) {
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	        asm("nop");
-	    }
-	}
+            for (i = 0; i < 1000; i++) {
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+                asm("nop");
+            }
+        }
 }
 
 void Hal_disconnected(void) {
@@ -238,7 +245,7 @@ DEBUG12_CONFIG(); DEBUG12_OFF();
     LED3_CONFIG();
     
     
-    
+    LED4_CONFIG();
     LED15_CONFIG();
     LED10_CONFIG();
     
@@ -305,6 +312,9 @@ switch(ledNum)
     case 3:
     LED3_ON();
     break;
+    case 4:
+    LED4_ON();
+    break;
     case 5:
     LED5_ON();
     break;
@@ -347,6 +357,9 @@ void Hal_User_ledOff(uint8_t ledNum)
     break;
     case 3:
     LED3_OFF();
+    break;
+    case 4:
+    LED4_OFF();
     break;
     case 6:
     LED6_OFF();
@@ -470,4 +483,3 @@ ISR(INT0_vect) {
 ISR(TIMER1_COMPA_vect) {
     postEvent(TICK_HANDLER_ID);
 }
-
