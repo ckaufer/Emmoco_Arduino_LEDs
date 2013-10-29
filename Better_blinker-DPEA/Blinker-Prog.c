@@ -24,17 +24,17 @@ static Blinker_delay_t curTime = 0;
 #define LED7 (1 << 7)
 #define LED8 (1 << 0)
 #define LED9 (1 << 1)
-#define LED10 ( 1 << 10 )
-#define LED11 (1 << 11)
-#define LED12 (1 << 12)
-#define LED13 (1 << 13)
-#define LED14 (1 << 14)
-#define LED15 (1 << 15)
+#define LED10 ( 1 << 2 )
+#define LED11 (1 << 3)
+#define LED12 (1 << 4)
+#define LED13 (1 << 5)
+#define LED14 (1 << 0)
+#define LED15 (1 << 1)
 
 #define NUM_PATTERNS 3
 #define PATTERN_LEN 3
 
-
+static uint16_t ledBitArray[12]={3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 0, 1};
 const uint16_t ledArray1[PATTERN_LEN]={LED3|LED6, LED4|LED7, LED5|LED7|LED8};
 static uint16_t ledArray2[PATTERN_LEN]={LED8, LED10, LED8|LED10};
 static uint16_t ledArray3[PATTERN_LEN]={LED_ALL, LED_NONE, LED3};
@@ -72,14 +72,27 @@ static void tickHandler(void) {
             curLedIdx = 0;
         }
         uint16_t i;
-        for (i = MIN_LED_NUM; i <= MAX_LED_NUM; i++) {
+        uint16_t i2;
+        //for (i = MIN_LED_NUM; i <= 7; i++) {
+            
+        for (i = 3; i <= 7; i ++) { 
             if (mask & (1 << i)) {
                 Hal_User_ledOn(i);
             }
             else {
                 Hal_User_ledOff(i);
             }
-        }
+         }
+        for (i2 = 0; i2 <= 5; i2 ++) { 
+            if (mask & (1 << i2)) {
+                Hal_User_ledOn(i2);
+            }
+            else {
+                Hal_User_ledOff(i2);
+            }
+         //}
+
+       }
     }
     
   //Hal_ledToggle();
