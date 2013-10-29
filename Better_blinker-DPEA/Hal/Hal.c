@@ -298,88 +298,92 @@ void Hal_idleLoop(void) {
 
 void Hal_User_ledOn(uint8_t ledNum)
 {
-switch(ledNum)
-{
-    case 9:
-    LED9_ON();
-    break;
-    case 8:
-    LED8_ON();
-    break;
-    case 7:
-    LED7_ON();
-    break;
-    case 3:
-    LED3_ON();
-    break;
-    case 4:
-    LED4_ON();
-    break;
-    case 5:
-    LED5_ON();
-    break;
-    case 6:
-    LED6_ON();
-    break;
-    case 13:
-    LED13_ON();
-    break;
-    case 11:
-    LED11_ON();
-    break;
-    case 12:
-    LED12_ON();
-    break;
-    case 14:
-    LED14_ON();
-    break;
-    case 15:
-    LED15_ON();
-    break;
-    
-}
+    switch(ledNum)
+        {
+            case 3:
+                LED3_ON();
+                break;
+            case 4:
+                LED4_ON();
+                break;
+            case 5:
+                LED5_ON();
+                break;
+            case 6:
+                LED6_ON();
+                break;
+            case 7:
+                LED7_ON();
+                break;
+            case 8:
+                LED8_ON();
+                break;
+            case 9:
+                LED9_ON();
+                break;
+            case 10:
+                LED10_ON();
+            case 11:
+                LED11_ON();
+                break;
+            case 12:
+                LED12_ON();
+                break;
+             case 13:
+                LED13_ON();
+                break;
+            case 14:
+                LED14_ON();
+                break;
+            case 15:
+                LED15_ON();
+                break;
+        }
 }
 void Hal_User_ledOff(uint8_t ledNum)
 {
-    switch(ledNum)
-    {
-   case 9:
-    LED9_OFF();
-    break;
-   case 8:
-     LED8_OFF();
-    break;
-    case 7:
-    LED7_OFF();
-    break;
-    case 5:
-    LED5_OFF();
-    break;
-    case 3:
-    LED3_OFF();
-    break;
-    case 4:
-    LED4_OFF();
-    break;
-    case 6:
-    LED6_OFF();
-    break;
-     case 13:
-     LED13_OFF();
-     break;
-     case 11:
-     LED11_OFF();
-     break;
-     case 12:
-     LED12_OFF();
-     break;
-     case 14:
-     LED14_OFF();
-     break;
-     case 15:
-     LED15_OFF();
-     break;
-    }
+        switch(ledNum)
+            {
+                case 3:
+                    LED3_OFF();
+                    break;
+                case 4:
+                    LED4_OFF();
+                    break;
+                case 5:
+                    LED5_OFF();
+                    break;
+                case 6:
+                    LED6_OFF();
+                    break;
+                case 7:
+                    LED7_OFF();
+                    break;
+               case 8:
+                     LED8_OFF();
+                    break;
+               case 9:
+                    LED9_OFF();
+                    break;
+                case 10:
+                    LED10_OFF();
+                    break;
+                 case 11:
+                     LED11_OFF();
+                     break;
+                 case 12:
+                     LED12_OFF();
+                     break;
+                 case 13:
+                     LED13_OFF();
+                     break;
+                 case 14:
+                     LED14_OFF();
+                     break;
+                 case 15:
+                     LED15_OFF();
+                     break;
+            }
 }
 void Hal_ledOff(void) {
     LED13_OFF();
